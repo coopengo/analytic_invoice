@@ -21,8 +21,11 @@ def suite():
             tearDown=doctest_teardown, encoding='utf-8',
             checker=doctest_checker,
             optionflags=doctest.REPORT_ONLY_FIRST_FAILURE))
-    suite.addTests(doctest.DocFileSuite('scenario_analytic_invoice_asset.rst',
-            tearDown=doctest_teardown, encoding='utf-8',
-            checker=doctest_checker,
-            optionflags=doctest.REPORT_ONLY_FIRST_FAILURE))
+    # This test is commented as it requires account_asset in order to run, which
+    #  we do not want. The test is required in analytic_invoice setup.py,
+    # and account_asset is only in analytic_invoice extras_depend
+    # suite.addTests(doctest.DocFileSuite('scenario_analytic_invoice_asset.rst',
+    #         tearDown=doctest_teardown, encoding='utf-8',
+    #         checker=doctest_checker,
+    #         optionflags=doctest.REPORT_ONLY_FIRST_FAILURE))
     return suite
