@@ -60,6 +60,15 @@ Create party::
     >>> party = Party(name='Party')
     >>> party.save()
 
+Create account category::
+
+    >>> ProductCategory = Model.get('product.category')
+    >>> account_category = ProductCategory(name="Account Category")
+    >>> account_category.accounting = True
+    >>> account_category.account_expense = expense
+    >>> account_category.account_revenue = revenue
+    >>> account_category.save()
+
 Create product::
 
     >>> ProductUom = Model.get('product.uom')
@@ -70,8 +79,7 @@ Create product::
     >>> template.default_uom = unit
     >>> template.type = 'service'
     >>> template.list_price = Decimal('40')
-    >>> template.account_expense = expense
-    >>> template.account_revenue = revenue
+    >>> template.account_category = account_category
     >>> template.save()
     >>> product, = template.products
 
@@ -103,7 +111,7 @@ Create invoice with analytic accounts::
     >>> line.unit_price = Decimal('40')
     >>> invoice.click('post')
     >>> invoice.state
-    u'posted'
+    'posted'
     >>> analytic_account.reload()
     >>> analytic_account.credit
     Decimal('200.00')
@@ -129,7 +137,7 @@ Create invoice with an empty analytic account::
     >>> line.unit_price = Decimal('40')
     >>> invoice.click('post')
     >>> invoice.state
-    u'posted'
+    'posted'
     >>> analytic_account.reload()
     >>> analytic_account.credit
     Decimal('200.00')
@@ -148,7 +156,7 @@ Credit invoice with refund::
     >>> credit.execute('credit')
     >>> invoice.reload()
     >>> invoice.state
-    u'paid'
+    'paid'
     >>> mandatory_analytic_account.reload()
     >>> mandatory_analytic_account.credit
     Decimal('240.00')
