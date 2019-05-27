@@ -2,30 +2,22 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "error:account.asset:"
-msgid "Some mandatory root account are missing on \"%(name)s\""
-msgstr ""
-
-msgctxt "error:account.invoice.line:"
-msgid "Some mandatory root account are missing on \"%(name)s\""
-msgstr ""
-
 msgctxt "field:account.asset,analytic_accounts:"
 msgid "Analytic Accounts"
-msgstr ""
+msgstr "Analüütilised kontod"
 
 msgctxt "field:account.asset,analytic_accounts_size:"
 msgid "Analytic Accounts Size"
-msgstr ""
+msgstr "Analüütiliste kontode mõõt"
 
 msgctxt "field:account.invoice.line,analytic_accounts:"
 msgid "Analytic Accounts"
-msgstr ""
+msgstr "Analüütilised kontod"
 
 msgctxt "field:account.invoice.line,analytic_accounts_size:"
 msgid "Analytic Accounts Size"
-msgstr ""
+msgstr "Analüütiliste kontode mõõt"
 
 msgctxt "view:account.invoice.line:"
 msgid "Analytic"
-msgstr ""
+msgstr "Analüütiline"

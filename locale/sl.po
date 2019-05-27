@@ -2,14 +2,6 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-msgctxt "error:account.asset:"
-msgid "Some mandatory root account are missing on \"%(name)s\""
-msgstr "Pri \"%(name)s\" manjkajo nekateri obvezni korenski konti."
-
-msgctxt "error:account.invoice.line:"
-msgid "Some mandatory root account are missing on \"%(name)s\""
-msgstr "Pri \"%(name)s\" manjkajo nekateri korenski konti."
-
 msgctxt "field:account.asset,analytic_accounts:"
 msgid "Analytic Accounts"
 msgstr "Analitični konti"
