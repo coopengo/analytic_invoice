@@ -20,7 +20,7 @@ Imports::
     ...     import add_asset_accounts
     >>> today = datetime.date.today()
 
-Install analytic_invoice and account_asset::
+Activate modules::
 
     >>> config = activate_modules(['analytic_invoice', 'account_asset'])
 
@@ -127,5 +127,14 @@ Create Moves for 1 month::
     >>> analytic_account.reload()
     >>> analytic_account.debit
     Decimal('100.00')
+    >>> analytic_account.credit
+    Decimal('0.00')
+
+Close the asset::
+
+    >>> asset.click('close')
+    >>> analytic_account.reload()
+    >>> analytic_account.debit
+    Decimal('1000.00')
     >>> analytic_account.credit
     Decimal('0.00')
